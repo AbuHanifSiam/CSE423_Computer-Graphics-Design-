@@ -3,13 +3,8 @@ import math
 rotation_axis = input("Enter rotation, rx,ry,rz: ")
 angle_degrees = int(input("Enter angle_radians of rotation: "))
 
-
-# Convert angle_radians to radians
 angle_radians = angle_degrees * (math.pi / 180)
 
-#print("angle_radians in radians:", math.sin(angle_radians))
-# Printing the user input
-#print("You entered:", rotation_axis)
 x = float(input("Enter x: "))
 y = float(input("Enter y: "))
 z = float(input("Enter z: ")) 

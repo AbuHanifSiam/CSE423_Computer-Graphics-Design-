@@ -19,21 +19,24 @@ def iterate():
     glLoadIdentity()
 
 def showScreen():
+    glClearColor(1.0, 1.0, 1.0, 1.0) #set the background color to white. RGB and Alpha
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
+    
     glLoadIdentity()
     iterate()
-    glColor3f(1.0, 1.0, 0.0) #konokichur color set (RGB)
+    glColor3f(0.0, 0.0, 0.0) #konokichur color set (RGB)
     #call the draw methods here
     draw_points(250, 250)
     glutSwapBuffers()
 
 
 
-glutInit()
-glutInitDisplayMode(GLUT_RGBA)
+glutInit() #initialize glut library
+glutInitDisplayMode(GLUT_RGBA) #set the initial display mode with color
 glutInitWindowSize(500, 500) #window size
-glutInitWindowPosition(0, 0)
+glutInitWindowPosition(0, 0) #window position in computer display, for this code it will be top left corner
 wind = glutCreateWindow(b"OpenGL Coding Practice") #window name
 glutDisplayFunc(showScreen)
 
 glutMainLoop()
+
